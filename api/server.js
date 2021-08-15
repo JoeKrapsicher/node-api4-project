@@ -8,6 +8,7 @@ server.use(express.json());
 
 server.get('/', async (req, res) => {
     try {
+        console.log("message of the day posting")
         res.status(200).json({messageOfTheDay: process.env.MOTD})
     } catch (error) {
         console.log('ERROR', error);
